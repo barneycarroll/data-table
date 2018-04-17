@@ -1,0 +1,39 @@
+{
+  "name": "data-table",
+  "version": "0.0.0",
+  "description": "An exercise in creating a navigable data table",
+  "main": "index.js",
+  "scripts": {
+    "reset": "shx rm -rf dist && shx mkdir dist && shx cp src/index.html ./dist",
+    "build": "npm run reset && rollup --config",
+    "watch": "rollup --config --watch",
+    "serve": "http-server dist",
+    "open": "opener http://127.0.0.1:8080",
+    "init": "run-p watch serve open",
+    "start": "run-s reset init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barneycarroll/data-table.git"
+  },
+  "author": "Barney Carroll <barney.carroll@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barneycarroll/data-table/issues"
+  },
+  "homepage": "https://github.com/barneycarroll/data-table#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "http-server": "^0.11.1",
+    "npm-run-all": "^4.1.2",
+    "opener": "^1.4.3",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "shx": "^0.2.2"
+  },
+  "dependencies": {}
+}
