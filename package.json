@@ -7,7 +7,7 @@
     "reset": "shx rm -rf dist && shx mkdir dist && shx cp src/index.html ./dist",
     "build": "npm run reset && rollup --config",
     "watch": "rollup --config --watch",
-    "serve": "http-server dist",
+    "serve": "http-server dist -s",
     "open": "opener http://127.0.0.1:8080",
     "init": "run-p watch serve open",
     "start": "run-s reset init"
@@ -30,10 +30,14 @@
     "npm-run-all": "^4.1.2",
     "opener": "^1.4.3",
     "rollup": "^0.57.1",
+    "rollup-plugin-auto-external": "^1.2.0",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-node-resolve": "^3.3.0",
     "shx": "^0.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "chance": "^1.0.13",
+    "mithril": "^1.1.6"
+  }
 }
